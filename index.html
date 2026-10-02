@@ -89,7 +89,7 @@
                 </div>
 
                 <div class="text-center p-4 bg-overlay-auto rounded-5">
-                    <h2 class="font-esthetic mb-4" style="font-size: 2rem;">Rohith &amp; Kshama</h2>
+                    <h2 class="font-esthetic mb-4" style="font-size: 2rem;">Rohith &amp;Kshama</h2>
                     <p class="m-0" style="font-size: 1rem;">26th October</p>
                 </div>
             </div>
@@ -109,7 +109,7 @@
 
                         <img src="./assets/images/file_00000000c208820788157e544a8f3311.png" data-src="./assets/images/file_00000000c208820788157e544a8f3311.png" alt="bg" onclick="undangan.guest.modal(this)" class="img-center-crop rounded-circle border border-3 border-light shadow my-4 mx-auto cursor-pointer">
 
-                        <h2 class="font-esthetic my-4" style="font-size: 2.25rem;">Rohith &amp; Kshama</h2>
+                        <h2 class="font-esthetic my-4" style="font-size: 2.25rem;">Rohith &amp;Kshama</h2>
                         <p class="my-2" style="font-size: 1.25rem;">26th October</p>
 
                         <button class="btn btn-outline-auto btn-sm shadow rounded-pill px-3 py-1" style="font-size: 0.825rem;">
@@ -172,8 +172,8 @@
                             </div>
 
                             <div data-aos="fade-left" data-aos-duration="2000" class="pb-1">
-                                <img src="./assets/images/kshama.jpeg" data-src="./assets/images/kshama.jpeg" alt="Kshama" onclick="undangan.guest.modal(this)" class="img-center-crop rounded-circle border border-3 border-light shadow my-4 mx-auto cursor-pointer" style="object-position: 75% 50%;">
-                                <h2 class="font-esthetic m-0" style="font-size: 2.125rem;">Ms. Kshama</h2>
+                                <img src="./assets/images/kshama.jpeg" data-src="./assets/images/kshama.jpeg" alt="Kshama Rai" onclick="undangan.guest.modal(this)" class="img-center-crop rounded-circle border border-3 border-light shadow my-4 mx-auto cursor-pointer" style="object-position: 75% 50%;">
+                                <h2 class="font-esthetic m-0" style="font-size: 2.125rem;">Ms. Kshama Rai</h2>
                             </div>
 
                             <div class="position-absolute" style="top: 90%; left: 5%;">
@@ -333,19 +333,41 @@
                     </div>
                 </section>
 
-                <!-- Comments removed per request -->
-                <div style="display:none;" aria-hidden="true">
-                    <div id="comments" data-loading="false"></div>
-                    <nav id="pagination"></nav>
-                    <div id="comment-form-default"></div>
-                    <div id="gif-form-default"></div>
-                    <input id="form-name" />
-                    <select id="form-presence"></select>
-                    <textarea id="form-comment"></textarea>
-                    <span id="page"></span>
-                    <div id="previous"></div>
-                    <div id="next"></div>
-                </div>
+                <!-- Wishes and Comments -->
+                <section class="bg-light-dark pb-4" id="comment">
+                    <div class="container">
+                        <h2 class="font-esthetic text-center pt-3 mb-4" style="font-size: 2.25rem;">Wishes &amp; Comments</h2>
+
+                        <div class="bg-theme-auto rounded-4 shadow p-3 mb-4">
+                            <div class="d-block" id="comment-form-default">
+                                <label for="form-name" class="form-label fw-bold my-1"><i class="fa-solid fa-user me-2"></i>Name</label>
+                                <input type="text" class="form-control shadow-sm rounded-4 mb-2" id="form-name" name="form-name" maxlength="100" placeholder="Your name" data-offline-disabled="false">
+
+                                <label for="form-presence" class="form-label fw-bold my-1"><i class="fa-solid fa-calendar-check me-2"></i>Attendance</label>
+                                <select class="form-select shadow-sm rounded-4 mb-2" id="form-presence" data-offline-disabled="false">
+                                    <option value="0" selected>Choose attendance</option>
+                                    <option value="1">Attending</option>
+                                    <option value="2">Not attending</option>
+                                </select>
+
+                                <label for="form-comment" class="form-label fw-bold my-1"><i class="fa-solid fa-comment me-2"></i>Comment</label>
+                                <div class="position-relative">
+                                    <button class="btn btn-secondary btn-sm rounded-4 shadow-sm me-1 my-1 position-absolute bottom-0 end-0" onclick="undangan.comment.gif.open(undangan.comment.gif.default)" aria-label="Add GIF" data-offline-disabled="false"><i class="fa-solid fa-photo-film"></i></button>
+                                    <textarea dir="auto" class="form-control shadow-sm mb-3 rounded-4" id="form-comment" name="form-comment" rows="3" minlength="1" maxlength="1000" placeholder="Write your wishes" data-offline-disabled="false"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="d-none mb-3" id="gif-form-default"></div>
+
+                            <div class="d-flex justify-content-end mb-0">
+                                <button onclick="undangan.comment.send(this)" class="btn btn-primary btn-sm rounded-4 shadow-sm" data-offline-disabled="false"><i class="fa-solid fa-paper-plane me-2"></i>Send</button>
+                            </div>
+                        </div>
+
+                        <div class="mb-2" id="comments" data-loading="false" style="display: none;"></div>
+                        <nav class="d-flex d-none justify-content-center py-3 mb-2" id="pagination" style="display: none;"></nav>
+                    </div>
+                </section>
 
                 <!-- Wave Separator -->
                 <div class="svg-wrapper">
@@ -360,9 +382,9 @@
                         <p class="pb-2 pt-4" style="font-size: 0.95rem;">With love, laughter and the blessings of our families, we begin a beautiful new chapter together.</p>
 
                         <h2 class="font-esthetic" style="font-size: 2.2rem;">Rohith ❤️ Kshama</h2>
-                        <h3 class="font-esthetic pt-4" style="font-size: 1.7rem;">The Shetty Family</h3>
+                        <h3 class="font-esthetic pt-4" style="font-size: 1.7rem;">The Rohith Shetty Family</h3>
                         <p class="m-0" style="font-size: 0.95rem;">&amp;</p>
-                        <h3 class="font-esthetic pb-4" style="font-size: 1.7rem;">The Kshama Family</h3>
+                        <h3 class="font-esthetic pb-4" style="font-size: 1.7rem;">The Kshama rai Family</h3>
 
                         <hr class="my-3">
 
@@ -371,7 +393,7 @@
                                 <small>Warmly invite you to celebrate the engagement of</small>
                             </div>
                             <div class="col-auto">
-                                <small>Rohith &amp; Kshama</small>
+                                <small>Rohith &amp; Ms. Kshama Rai</small>
                             </div>
                         </div>
                     </div>
